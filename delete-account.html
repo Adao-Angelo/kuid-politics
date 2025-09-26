@@ -85,49 +85,50 @@
           var(--primary-light) 0%,
           #ffffff 100%
         );
-        padding: 56px 0;
+        padding: 60px 0 40px;
       }
 
       .hero h1 {
-        font-size: 2rem;
-        margin-bottom: 12px;
+        font-size: 2.2rem;
+        margin-bottom: 16px;
         color: var(--text-dark);
       }
 
       .hero p {
-        font-size: 1rem;
+        font-size: 1.1rem;
         max-width: 760px;
         margin: 0 auto;
         color: var(--text-light);
+        line-height: 1.7;
       }
 
       .card {
         background: white;
         border-radius: 12px;
         box-shadow: 0 6px 20px rgba(15, 23, 42, 0.06);
-        padding: 28px;
-        margin-top: -30px;
+        padding: 32px;
+        margin-top: 30px;
       }
 
       .content {
-        padding: 36px 0 80px;
+        padding: 40px 0 80px;
       }
 
       .section-title {
-        font-size: 1.4rem;
-        margin-bottom: 18px;
+        font-size: 1.5rem;
+        margin-bottom: 24px;
         color: var(--primary-dark);
         border-bottom: 2px solid var(--primary-light);
-        padding-bottom: 8px;
+        padding-bottom: 10px;
       }
 
       .privacy-section {
-        margin-bottom: 26px;
+        margin-bottom: 32px;
       }
 
       .privacy-section h3 {
-        font-size: 1.1rem;
-        margin-bottom: 12px;
+        font-size: 1.2rem;
+        margin-bottom: 16px;
         color: var(--text-dark);
         display: flex;
         align-items: center;
@@ -136,57 +137,63 @@
       .section-number {
         background-color: var(--primary-color);
         color: white;
-        width: 28px;
-        height: 28px;
+        width: 30px;
+        height: 30px;
         border-radius: 50%;
         display: flex;
         align-items: center;
         justify-content: center;
-        margin-right: 10px;
-        font-size: 0.85rem;
+        margin-right: 12px;
+        font-size: 0.9rem;
+        font-weight: 600;
       }
 
       .privacy-section p {
-        margin-bottom: 12px;
+        margin-bottom: 16px;
         color: var(--text-light);
+        line-height: 1.7;
       }
 
       .privacy-section ul {
-        margin-left: 20px;
-        margin-bottom: 12px;
+        margin-left: 24px;
+        margin-bottom: 16px;
       }
 
       .privacy-section li {
-        margin-bottom: 8px;
+        margin-bottom: 10px;
         color: var(--text-light);
+        line-height: 1.6;
       }
 
       .highlight-box {
         background-color: var(--primary-light);
         border-left: 4px solid var(--primary-color);
-        padding: 14px;
-        margin: 16px 0;
+        padding: 18px;
+        margin: 20px 0;
         border-radius: 0 6px 6px 0;
         color: var(--text-dark);
       }
 
       .actions {
         display: flex;
-        gap: 12px;
+        gap: 16px;
         flex-wrap: wrap;
-        margin-top: 14px;
+        margin-top: 20px;
       }
 
       .btn {
         display: inline-flex;
         align-items: center;
+        justify-content: center;
         gap: 10px;
-        padding: 10px 16px;
+        padding: 12px 20px;
         border-radius: 8px;
         font-weight: 600;
         text-decoration: none;
         cursor: pointer;
         border: none;
+        transition: all 0.3s ease;
+        font-size: 1rem;
       }
 
       .btn-primary {
@@ -199,38 +206,28 @@
         box-shadow: 0 6px 18px rgba(245, 124, 0, 0.18);
       }
 
+      .btn-primary:hover {
+        transform: translateY(-2px);
+        box-shadow: 0 8px 24px rgba(245, 124, 0, 0.25);
+      }
+
       .btn-outline {
         background: transparent;
         color: var(--accent);
         border: 1px solid rgba(11, 108, 240, 0.12);
       }
 
-      .form-row {
-        display: grid;
-        grid-template-columns: 1fr 120px;
-        gap: 10px;
-        margin-top: 12px;
-        align-items: center;
-      }
-
-      .form-row input,
-      .form-row textarea {
-        padding: 10px 12px;
-        border: 1px solid #e6e6e6;
-        border-radius: 8px;
-        font-size: 0.95rem;
-      }
-
       .note {
         font-size: 0.9rem;
         color: var(--text-light);
-        margin-top: 8px;
+        margin-top: 10px;
+        line-height: 1.5;
       }
 
       footer {
         background-color: var(--text-dark);
         color: #ffffff;
-        padding: 28px 0;
+        padding: 32px 0;
         text-align: center;
       }
 
@@ -244,13 +241,15 @@
         font-size: 20px;
         font-weight: 700;
         color: var(--primary-color);
-        margin-bottom: 12px;
+        margin-bottom: 16px;
       }
 
       .footer-links {
         display: flex;
-        gap: 12px;
-        margin-bottom: 12px;
+        gap: 16px;
+        margin-bottom: 16px;
+        flex-wrap: wrap;
+        justify-content: center;
       }
 
       .footer-links a {
@@ -269,16 +268,34 @@
       }
 
       @media (max-width: 768px) {
+        .hero {
+          padding: 40px 0 30px;
+        }
+
         .hero h1 {
-          font-size: 1.6rem;
+          font-size: 1.8rem;
+        }
+
+        .hero p {
+          font-size: 1rem;
         }
 
         .card {
-          padding: 20px;
+          padding: 24px;
+          margin-top: 20px;
         }
 
-        .form-row {
-          grid-template-columns: 1fr;
+        .section-title {
+          font-size: 1.3rem;
+        }
+
+        .privacy-section h3 {
+          font-size: 1.1rem;
+        }
+
+        .btn {
+          width: 100%;
+          justify-content: center;
         }
       }
     </style>
@@ -286,180 +303,180 @@
   <body>
     <header>
       <div class="container">
-        <nav class="navbar">
-          <a href="#" class="logo"> <span class="logo-icon">⭐</span> Kudi </a>
+        <nav class="navbar" aria-label="Main navigation">
+          <a href="#" class="logo">
+            <span class="logo-icon" aria-hidden="true">⭐</span>
+            Kudi
+          </a>
         </nav>
       </div>
     </header>
 
-    <section class="hero">
-      <div class="container">
-        <h1>Account Deletion Request</h1>
-        <p>
-          Here you can request the deletion of your Kudi account and associated
-          data. Please read the instructions and choose your preferred request
-          method.
-        </p>
+    <main>
+      <section class="hero">
+        <div class="container">
+          <h1>Account Deletion Request</h1>
+          <p>
+            Here you can request the deletion of your Kudi account and
+            associated data. Please read the instructions carefully before
+            proceeding with your request.
+          </p>
 
-        <div class="container card" style="margin-top: 18px">
-          <h2 class="section-title">How to Request Account Deletion</h2>
+          <div class="card">
+            <h2 class="section-title">How to Request Account Deletion</h2>
 
-          <div class="privacy-section">
-            <h3><span class="section-number">1</span> Option — Via the App</h3>
-            <p>
-              (If available) Log in to the Kudi app, go to
-              <strong>Settings &gt; Security &gt; Delete Account</strong> and
-              follow the steps. Once confirmed, the request will be processed
-              automatically.
-            </p>
-            <p class="note">
-              If this feature is implemented in the app, the process is faster
-              and more secure — we recommend users choose this method.
-            </p>
-          </div>
-
-          <div class="privacy-section">
-            <h3>
-              <span class="section-number">2</span> Option — Send Request by
-              Email
-            </h3>
-            <p>
-              Send an email to our support team with the subject:
-              <strong>"Account Deletion Request - Kudi"</strong> and include:
-            </p>
-            <ul>
-              <li>Full name used on the account</li>
-              <li>Email address associated with the account</li>
-              <li>Reason for the request (optional)</li>
-            </ul>
-
-            <div class="actions">
-              <a
-                id="mailtoBtn"
-                class="btn btn-primary"
-                href="mailto:support@kudi.com?subject=Account%20Deletion%20Request%20-%20Kudi&body=Please%20delete%20my%20Kudi%20account.%0A%0AFull%20name:%0AAssociated%20email:%0AReason%20(optional):"
-                >Send Email to Support</a
-              >
-
-              <form
-                id="quickForm"
-                onsubmit="return prepareMail(event)"
-                style="width: 100%; max-width: 420px"
-              >
-                <div class="form-row">
-                  <input
-                    id="qEmail"
-                    type="email"
-                    placeholder="Your email (required)"
-                    required
-                  />
-                  <button class="btn btn-outline" type="submit">
-                    Generate Email
-                  </button>
-                </div>
-              </form>
+            <div class="privacy-section">
+              <h3><span class="section-number">1</span> Contact Support</h3>
+              <p>
+                Currently, account deletion requests can only be processed by
+                contacting our support team directly. Please send an email with
+                the required information to initiate the account deletion
+                process.
+              </p>
+              <p class="note">
+                We're working on implementing an in-app account deletion feature
+                for a more streamlined experience in the future.
+              </p>
             </div>
-            <p class="note">
-              The email will be sent to <strong>support@kudi.com</strong>.
-              Replace this address with the real one if needed.
-            </p>
-          </div>
 
-          <div class="privacy-section">
-            <h3><span class="section-number">3</span> What Gets Deleted</h3>
-            <ul>
-              <li>
-                <strong>Authentication credentials:</strong> we will remove the
-                user from Firebase Authentication.
-              </li>
-              <li>
-                <strong>Profile and preferences data:</strong> all
-                Firestore/Realtime Database documents linked to the user UID
-                will be deleted (e.g., preferences, visit history, favorites).
-              </li>
-              <li>
-                <strong>User-generated content:</strong> comments, reviews, and
-                uploads will be deleted if directly tied to the UID (or
-                anonymized, if required).
-              </li>
-            </ul>
-          </div>
+            <div class="privacy-section">
+              <h3>
+                <span class="section-number">2</span> Send Request by Email
+              </h3>
+              <p>
+                Send an email to our support team with the subject:
+                <strong>"Account Deletion Request - Kudi"</strong> and include:
+              </p>
+              <ul>
+                <li>Full name used on the account</li>
+                <li>Email address associated with the account</li>
+                <li>Reason for the request (optional)</li>
+              </ul>
 
-          <div class="privacy-section">
-            <h3>
-              <span class="section-number">4</span> Data Retained and Retention
-              Period
-            </h3>
-            <p>
-              For legal and security reasons, we may retain certain technical
-              logs for a limited period:
-            </p>
-            <ul>
-              <li>
-                System logs (technical records): retained up to 30 days for
-                auditing and security.
-              </li>
-              <li>
-                Aggregated and anonymized data for statistics: retained
-                indefinitely without identifying users.
-              </li>
-            </ul>
-          </div>
+              <div class="actions">
+                <a
+                  id="mailtoBtn"
+                  class="btn btn-primary"
+                  href="mailto:gouveiamartins6@gmail.com?subject=Account%20Deletion%20Request%20-%20Kudi&body=Please%20delete%20my%20Kudi%20account.%0A%0AFull%20name:%0AAssociated%20email:%0AReason%20(optional):"
+                  aria-label="Send email to support team"
+                >
+                  <svg
+                    width="16"
+                    height="16"
+                    viewBox="0 0 16 16"
+                    fill="currentColor"
+                    aria-hidden="true"
+                  >
+                    <path
+                      d="M14.5 2h-13A1.5 1.5 0 0 0 0 3.5v9A1.5 1.5 0 0 0 1.5 14h13a1.5 1.5 0 0 0 1.5-1.5v-9A1.5 1.5 0 0 0 14.5 2zM14 4.5L8 9 2 4.5v-1L8 8l6-4.5v1z"
+                    />
+                  </svg>
+                  Contact Support Team
+                </a>
+              </div>
+              <p class="note">
+                The email will be sent to
+                <strong>gouveiamartins6@gmail.com</strong>. Please make sure to
+                include all required information for faster processing.
+              </p>
+            </div>
 
-          <div class="privacy-section">
-            <h3><span class="section-number">5</span> Processing Time</h3>
-            <p>
-              After confirming your request, we will delete your data within
-              <strong>30 days</strong>. You will receive a confirmation email
-              once the process is complete.
-            </p>
-          </div>
+            <div class="privacy-section">
+              <h3><span class="section-number">3</span> What Gets Deleted</h3>
+              <ul>
+                <li>
+                  <strong>Authentication credentials:</strong> we will remove
+                  the user from Firebase Authentication.
+                </li>
+                <li>
+                  <strong>Profile and preferences data:</strong> all
+                  Firestore/Realtime Database documents linked to the user UID
+                  will be deleted (e.g., preferences, visit history, favorites).
+                </li>
+                <li>
+                  <strong>User-generated content:</strong> comments, reviews,
+                  and uploads will be deleted if directly tied to the UID (or
+                  anonymized, if required).
+                </li>
+              </ul>
+            </div>
 
-          <div class="privacy-section">
-            <h3>
-              <span class="section-number">6</span> Notes on Firebase
-              Authentication (OAuth)
-            </h3>
-            <p>
-              Kudi uses <strong>Firebase Authentication</strong> (including
-              OAuth via Google, Facebook, or email). When an account is deleted:
-            </p>
-            <ul>
-              <li>
-                The authentication account is removed from Firebase
-                Authentication.
-              </li>
-              <li>
-                Associated data stored in Firestore/Realtime DB is deleted as
-                outlined above.
-              </li>
-              <li>
-                If you used third-party login (e.g., Google), you can also
-                revoke the permission directly in your external provider
-                account.
-              </li>
-            </ul>
-          </div>
+            <div class="privacy-section">
+              <h3>
+                <span class="section-number">4</span> Data Retained and
+                Retention Period
+              </h3>
+              <p>
+                For legal and security reasons, we may retain certain technical
+                logs for a limited period:
+              </p>
+              <ul>
+                <li>
+                  System logs (technical records): retained up to 30 days for
+                  auditing and security.
+                </li>
+                <li>
+                  Aggregated and anonymized data for statistics: retained
+                  indefinitely without identifying users.
+                </li>
+              </ul>
+            </div>
 
-          <div class="privacy-section highlight-box">
-            <strong>Important:</strong>
-            <p style="margin-top: 8px">
-              Before submitting your request, make sure you have access to the
-              email linked to your account (needed to confirm your identity). If
-              you don’t have access, contact support and provide as much
-              information as possible so we can verify account ownership.
-            </p>
-          </div>
+            <div class="privacy-section">
+              <h3><span class="section-number">5</span> Processing Time</h3>
+              <p>
+                After confirming your request, we will delete your data within
+                <strong>30 days</strong>. You will receive a confirmation email
+                once the process is complete.
+              </p>
+            </div>
 
-          <div style="margin-top: 14px">
-            <p class="note">
-              <strong>Support contact:</strong> support@kudi.com — replace this
-              email with your real support address before publishing the page.
-            </p>
+            <div class="privacy-section">
+              <h3>
+                <span class="section-number">6</span> Notes on Firebase
+                Authentication (OAuth)
+              </h3>
+              <p>
+                Kudi uses <strong>Firebase Authentication</strong> (including
+                OAuth via Google, Facebook, or email). When an account is
+                deleted:
+              </p>
+              <ul>
+                <li>
+                  The authentication account is removed from Firebase
+                  Authentication.
+                </li>
+                <li>
+                  Associated data stored in Firestore/Realtime DB is deleted as
+                  outlined above.
+                </li>
+                <li>
+                  If you used third-party login (e.g., Google), you can also
+                  revoke the permission directly in your external provider
+                  account.
+                </li>
+              </ul>
+            </div>
+
+            <div class="privacy-section highlight-box">
+              <strong>Important:</strong>
+              <p style="margin-top: 10px">
+                Before submitting your request, make sure you have access to the
+                email linked to your account (needed to confirm your identity).
+                If you don't have access, contact support and provide as much
+                information as possible so we can verify account ownership.
+              </p>
+            </div>
+
+            <div style="margin-top: 20px">
+              <p class="note">
+                <strong>Support contact:</strong> gouveiamartins6@gmail.com
+              </p>
+            </div>
           </div>
         </div>
-      </div>
-    </section>
+      </section>
+    </main>
 
     <footer>
       <div class="container">
@@ -475,24 +492,5 @@
         </div>
       </div>
     </footer>
-
-    <script>
-      function prepareMail(e) {
-        e.preventDefault();
-        const email = document.getElementById("qEmail").value.trim();
-        if (!email) return false;
-        const to = "support@kudi.com";
-        const subject = encodeURIComponent("Account Deletion Request - Kudi");
-        const body = encodeURIComponent(
-          "Please delete my Kudi account and all associated personal data.\n\n" +
-            "Associated email: " +
-            email +
-            "\nFull name:\nReason (optional):\n\nThank you."
-        );
-        window.location.href =
-          "mailto:" + to + "?subject=" + subject + "&body=" + body;
-        return false;
-      }
-    </script>
   </body>
 </html>
